@@ -3,7 +3,7 @@ from should_dsl import should, should_not
 import time
 
 class Computador (object):
-	lista_computadores=[]
+        lista_computadores=[]
 
 	def __init__(self, id_patrimonio, desc, max_HD, max_memoria):
 		self.id_patrimonio = id_patrimonio
