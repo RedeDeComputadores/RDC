@@ -24,7 +24,7 @@ class TestUsuario(unittest.TestCase):
 
 	def it_teste_usuario_deve_enviar_arquivo(self):
 		usuario = Usuario(nome_de_guerra='@usuario', senha='senha')
-		servidor = Servidor(codigo_implementacao=10, descricao='oi', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
+		servidor = Servidor(codigo_patrimonio=10, descricao='oi', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
 		impressora = Impressora(10, 'impressora', 100)
 		impressora.conectar_ao_servidor()
 		arquivo = Arquivo(nome='file', proprietario=usuario, impressora_destino=impressora)
@@ -34,7 +34,7 @@ class TestUsuario(unittest.TestCase):
 
 	def it_teste_usuario_deve_enviar_duas_copias(self):
 		usuario = Usuario(nome_de_guerra='@usuario', senha='senha')
-		servidor = Servidor(codigo_implementacao=10, descricao='oi', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
+		servidor = Servidor(codigo_patrimonio=10, descricao='oi', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
 		impressora = Impressora(10, 'impressora', 100)
 		impressora.conectar_ao_servidor()
 		arquivo = Arquivo(nome='file', proprietario=usuario, impressora_destino=impressora)

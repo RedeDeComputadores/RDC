@@ -6,8 +6,8 @@ from microcomputador import Microcomputador
 
 class TestMicrocomputador(unittest.TestCase):
 	def it_teste_deve_criar_um_microcomputador(self):
-		micro = Microcomputador(codigo_implementacao=9, descricao='oi', capacidade_do_hd=500, quantidade_de_ram=2, estacao=1)
-		micro.codigo_implementacao |should| equal_to(9)
+		micro = Microcomputador(codigo_patrimonio=9, descricao='oi', capacidade_do_hd=500, quantidade_de_ram=2, estacao=1)
+		micro.codigo_patrimonio |should| equal_to(9)
 		micro.descricao |should| equal_to('oi')
 		micro.capacidade_do_hd |should| equal_to(500)
 		micro.quantidade_de_ram |should| equal_to(2)
