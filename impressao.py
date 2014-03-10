@@ -1,30 +1,23 @@
-#coding:utf-8
+#encoding:utf-8
 
-class Impressao(object):
+from servidor import Servidor
+
+class Impressora(object):
+    def __init__(self, codigo_patrimonio, descricao, velocidade):
+	self.codigo_patrimonio = codigo_patrimonio
+	self.descricao = descricao
+	self.velocidade = velocidade
+	self.fila_de_impressao = []
+
+    def conectar_ao_servidor(self):
 	
-	def __init__(self, nome_arquivo, usuario, impressora, copia=1):
-		if(self._verifica_duplicidade_arquivos(nome_arquivo, usuario)):
-			self.arquivo = nome_arquivo
-			self.usuario = usuario
-			self.impressora = impressora
-			self.status = "aguardando"
-			self.copia = copia
-			Impressao.armazenar_impressao(self)
-		else:
-			raise TypeError("Atenção: Arquivos idênticos sendo enviados pelo mesmo usuário!")
+        for servidor in Servidor.servidores:
+            if servidor.impressoras_conectadas < 3:
+               servidor.impressoras_conectadas += 1
+               break
+        else:
+            raise ErroConexao('Não há servidores disponíveis!')
 
-	def get_usuario(self):
-		return self.usuario
-
-	def get_arquivo(self):
-		return self.arquivo
-
-	def get_copias(self):
-		return self.copia
-
-	def get_status(self):
-		return self.status
-
-	def set_status(self, novo_status):
-		self.status = novo_status
+class ErroConexao(Exception):
+    pass
 
