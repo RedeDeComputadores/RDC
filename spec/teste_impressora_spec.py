@@ -5,6 +5,8 @@ from should_dsl import should
 from impressora import Impressora, ErroConexao
 from servidor import Servidor
 
+
+
 class TestImpressora(unittest.TestCase):
 	def setUp(self):
 		Servidor.servidores = []
@@ -50,6 +52,7 @@ class TestImpressora(unittest.TestCase):
 		impressora6.conectar_ao_servidor()
 		servidor.impressoras_conectadas |should| equal_to(3)
 		servidor.impressoras_conectadas |should| equal_to(3)
+
 
 if __name__ == "__main__":
 	unittest.main()

@@ -8,6 +8,7 @@ from arquivo import Arquivo
 from impressora import Impressora
 from servidor import Servidor
 
+
 class TestUsuario(unittest.TestCase):
 	def it_teste_deve_criar_um_usuario(self):
 		usuario = Usuario(nome_de_guerra='@usuario', senha='senha')

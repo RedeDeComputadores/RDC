@@ -7,7 +7,8 @@ from impressora import Impressora
 from usuario import Usuario
 
 class TestArquivo(unittest.TestCase):
-	def it_teste_deve_criar_um_arquivo(self):
+
+    def it_teste_deve_criar_um_arquivo(self):
 		usuario = Usuario(nome_de_guerra='@usuario', senha='senha')
 		impressora = Impressora(10, 'impressora', 100)
 		arquivo = Arquivo(nome='file', proprietario=usuario, impressora_destino=impressora)
