@@ -43,6 +43,8 @@ class TestUsuario(unittest.TestCase):
 		usuario.enviar_arquivo(arquivo, 1)
 		usuario.conexao.arquivos_enviados |should| equal_to({arquivo.nome: 2})
 
+
 if __name__ == "__main__":
 	unittest.main()
+
 
