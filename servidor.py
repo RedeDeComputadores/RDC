@@ -19,3 +19,5 @@ class Servidor(Microcomputador):
 	def adicionar_servidor(servidor):
 		Servidor.servidores.append(servidor)
 
+
+
