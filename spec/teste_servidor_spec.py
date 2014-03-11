@@ -17,7 +17,7 @@ quantidade_maxima_de_buffer=10)
 
 	def it_teste_deve_criar_uma_lista_de_servidores(self):
 		servidor2 = Servidor(codigo_patrimonio=11, descricao='tim', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
-		servidor2 = Servidor(codigo_patrimonio=12, descricao='vivo', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
+		servidor3 = Servidor(codigo_patrimonio=12, descricao='vivo', capacidade_do_hd=5, quantidade_de_ram=8, estacao=1, quantidade_maxima_de_buffer=10)
 		Servidor.servidores |should| have(3).itens
 
 if __name__ == "__main__":
